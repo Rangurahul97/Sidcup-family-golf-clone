@@ -1,0 +1,514 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat';
+}
+
+.circle{
+       
+     height: 18px;
+     width: 18px;
+     background-color: #aacc00;
+     border-radius: 50%;
+     position: fixed;
+     pointer-events: none;
+     transition: all cubic-bezier(.15,.58,.26,.95) 1s;
+     mix-blend-mode: difference;
+     z-index: 9999;
+     transform: scale(2px,2px);
+}
+
+.circle2{
+       
+    height: 15vw;
+    width: 15vw;
+    background-color: #aacc00;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    transform: scale(2px,2px);
+    filter: blur(150px);
+    
+}
+
+.nav{ 
+     
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+     padding: 1rem 8vw;
+    position: fixed;
+    color: white;
+    text-transform: uppercase;
+    gap: 4vw;
+    z-index: 999;
+}
+
+.nav img{
+      height: 6vw;
+      width: 6vw;
+    }
+
+.nav h4{ 
+     color: white;
+     font-size: 1.1rem;
+     font-weight: 400;
+     cursor: pointer;
+}
+
+
+.main{
+
+    min-height:100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+ video{
+     
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+.page1{
+
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+}
+
+.heading{
+     
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: 14vw;
+      color: white;
+}
+
+.heading h1{
+
+      font-weight: 600;
+      font-size: 7.5vw;
+      text-transform: uppercase;
+      position: relative;
+}
+
+.heading h1::before{
+      
+     content: "EAT. DRINK. PLAY.";
+     color: black;
+     position: absolute;
+     top: -5px;
+     left: -6px;
+     -webkit-text-stroke: 2px #bfd200;
+     z-index: -1;
+}
+
+.heading h3{
+      
+      font-size: 2vw;
+      font-size: 700;
+      text-transform: uppercase;
+      padding-bottom: 1.5vw;
+}
+
+.heading p{ 
+     
+       width: 40vw;
+       text-align: center;
+       font-size: 1.2vw;
+       font-weight: 500;
+}
+.download{
+      
+     height: 15vw;
+     width: 15vw;
+     border: 2px solid #aacc00;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     top: 30vw;
+     left: -2vw;
+}
+.download i{ 
+      
+     font-size: 2.5vw;
+     color: white;
+}
+.page2{ 
+     
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 2vw;
+
+}
+.adds{
+     
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: flex;
+}
+
+.add_part { 
+     
+    animation-name: scroller;
+    animation-duration: 36s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+
+}
+
+.adds::-webkit-scrollbar{ 
+    display: none;
+}
+
+.add_part h4{
+     
+       display: inline-block;
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 7vw;
+       font-weight: 600;
+       padding-left: 10px;
+       color: transparent;
+       -webkit-text-stroke: 2px #aacc00;
+       
+}
+
+.add_part h4:hover{ 
+     
+  transition-duration: 1s;
+  color: #aacc00;
+  
+}
+
+@keyframes scroller {
+    
+    form{ 
+          transform: translateX(0);
+
+    }
+
+    to{
+         transform: translateX(-100%);
+    }
+}
+.about_us{
+     
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2vw 5vw;
+}
+
+.about_us img{ 
+     
+      height: 15vw;
+      width: 15vw;
+      border-radius: 15px;
+      object-fit: cover;
+}
+
+
+
+.details h4{
+      
+     color: white;
+     text-align: center;
+     font-size: 3.5vw;
+     font-weight: 600;
+     text-transform: uppercase;
+
+}
+
+.details p{
+       
+      color: white;
+      width: 48vw;
+      font-size: 1.3vw;
+      text-align: center;
+      font-weight:500;
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+      line-height: 1.3;
+}
+
+.pics_info{
+        
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.pic{ 
+       
+  
+      object-fit: cover;
+       height: 19vw;
+       width: 21vw;
+      border-radius: 20px;
+      z-index: 99;
+      margin: 1vw 3vw;      
+      overflow: hidden;
+}
+
+.pic:hover{
+        
+      transition-duration: 0.5s;
+       transform: rotate3d(1,1,0,18deg);
+}
+
+#pic1{     
+      background-image: url("card1.avif");
+      background-size: cover;
+
+}
+#pic2{ 
+        
+      background-image: url("card2.webp");
+      background-size: cover;
+
+}
+#pic3{ 
+       
+       background-image: url("card3.avif");
+       background-size: cover;
+}
+.inner_info{
+      
+      padding-top: 14vw;
+      padding-left: 1.5vw;
+      background-color: #aacc00;
+      opacity: 0;
+      
+}
+
+.inner_info h4{ 
+
+      font-size: 2vw;
+      white-space: nowrap;
+      text-transform: uppercase;
+      padding-bottom: 1vw;
+}
+.inner_info P{ 
+        
+       font-weight: 500;
+       text-align: start;
+       font-size: 15px;
+       width: 95%;
+}
+
+.inner_info:hover{
+      
+       transition-duration: 1s;
+       opacity: 1;
+}
+
+.sign_up{
+       
+       height: 14vw;
+       width: 100%;
+       overflow: hidden;
+       margin-top: 2vw;
+       background-image: linear-gradient(to bottom left, #2b9348, #ccff33);
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+
+.sign_up h4{
+        
+         font-size: 1.7vw;
+         text-transform: uppercase;
+         text-align: center;
+         width: 40vw;
+         line-height: 1.4;
+}
+
+
+.sign_up img{
+        
+       width: 15%;
+       object-fit: cover;
+
+}
+.page3{
+       min-height: 100vh;
+       width: 100%;
+       margin-top: 18vw;
+}
+
+.feact{
+ padding-left: 15vw;
+ position: relative;
+
+}
+
+.feact img{
+
+        height: 4rem;
+}
+
+.feact p{
+       
+      font-size: 2.3vw;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      width: 60vw;
+      padding-left: 6vw;
+      line-height: 1.3;
+
+}
+
+#first_img{
+         
+         position: absolute;
+         top: -60%;
+         left: 10%;
+}
+
+#last_img{ 
+       
+       position: absolute;
+       right: 8%;
+       bottom: -45%;
+}
+
+.end_tittles{
+        
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-top: 15vw;
+       position: relative;
+}
+
+.end_tittles h2{
+        
+      z-index: 1;
+      color: transparent;
+      position: absolute;
+      font-size: 6.2vw;
+      text-transform: uppercase;
+      font-family: 'Times New Roman', Times, serif;
+      -webkit-text-stroke: 2px white;
+      top: -9%;
+}
+
+.boxs{
+      color: #000;
+      height: 9vw;
+      width: 25vw;
+      margin: 0px 3vw;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 2vw;
+      z-index: 9;
+      background-color: #80b918;
+ }
+
+ #box1:hover{
+        background-image: url(page-toptracer-1024x683.avif);
+        background-size: cover;
+        color: white;
+
+ }
+ #box2:hover{
+
+      background-image: url(page-lessons-1024x683.avif);
+      background-size: cover;
+      color: white;
+
+}
+#box3:hover{
+        
+      background-image: url(page-ag-1024x682.avif);
+      background-size: cover;
+      color: white;
+}
+
+.footer{
+        
+      display: flex;
+      justify-content:start;
+      align-items: center;
+      height: 42vh;
+      width: 100%;
+      background-color: liner-gra;
+      overflow: hidden;
+      position: relative;
+      background-image: linear-gradient(to bottom left , #38b000, #ccff33, #008000);
+
+}
+
+.footer_pics{
+        
+          height: 100%;
+          width: 20%;
+}
+
+#footer_first_pic{ 
+       
+       height: 100%;
+       width: 100%;
+}
+#footer_last_pic{
+       
+      height: 6.5vw;
+       position: absolute;
+       top: 35%;
+       left: 6%;
+       z-index: 99;
+}
+.footer_info1{
+        
+      padding: 0px 2vw;
+}
+
+.footer_info1 h4{
+      text-transform: uppercase;
+      font-size: 1.6vw;
+      font-weight: 600;
+      padding: .2vw 0px;
+}
+
+.footer_info2 {
+        
+       padding: 0px 3vw;
+}
+
+.footer_info2 h5{
+        
+      text-transform: uppercase;
+      font-size: 1.6vw;
+      font-weight: 600;
+      padding: .2vw 0px;
+}
+
+.footer_info3 {
+       
+       padding: 0px 4vw;
+
+}
+
+.footer_info3 h6{
+       
+      text-transform: uppercase;
+      font-size: 1vw;
+      font-weight: 600;
+}
+
